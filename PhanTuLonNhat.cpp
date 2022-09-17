@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<math.h>
 using namespace std;
 int main()
 {
@@ -7,18 +6,18 @@ int main()
     cin>>t;
     while(t--)
     {
-        int n;
-        cin>>n;
+        int n,k;
+        cin>>n>>k;
         int a[n];
         for(int i=0;i<n;i++)
         {
             cin>>a[i];
         }
         sort(a,a+n);
-        for(int i=0;i<n;i++)
+        reverse(a,a+n);
+        for(int i=0;i<k;i++)
         {
             cout<<a[i]<<" ";
-
         }
         cout<<endl;
     }
