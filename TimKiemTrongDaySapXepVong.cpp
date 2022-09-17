@@ -1,7 +1,14 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-const int MOD= 1000000007;
+int linearSearch(int a[], int x, int n) 
+{
+    for( int i = 0; i < n; i++ ) {
+        if ( a[i] == x) {
+            return i+1;
+        }
+    }
+    return -1;
+}
 int main()
 {
     int t;
@@ -15,15 +22,7 @@ int main()
         {
             cin>>a[i];
         }
-        long long lt=1,res=0;
-        for(int i=n-1;i>=0;i--)
-        {
-            res+=a[i]*lt;
-            res%=MOD;
-            lt*=x;
-            lt%=MOD;
-        }
-        cout<<res<<endl;
+        int m = linearSearch(a,x,n);
+        cout<<m<<endl;
     }
-    return 0;
 }
