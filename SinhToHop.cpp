@@ -41,11 +41,10 @@ int main()
         {
             for(int i=1;i<=k;i++)
             {
-                cout<<a[i];
+                cout<<a[i]<<" ";;
             }
-            cout<<" ";
+            cout<<endl;
             next();
-        }
-        cout<<endl;
+        }   
     }
 }
